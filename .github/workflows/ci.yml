@@ -1,0 +1,21 @@
+name: CI
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+jobs:
+  build-demo:
+    name: Resolve kit from GitHub + build (generic iOS Simulator)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Xcode version
+        run: xcodebuild -version
+      - name: Resolve the remote package (pinned to the kit's release tag)
+        run: xcodebuild -resolvePackageDependencies -project Demo.xcodeproj -scheme Demo
+      - name: Build for a generic iOS Simulator
+        run: |
+          xcodebuild build -project Demo.xcodeproj -scheme Demo \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO

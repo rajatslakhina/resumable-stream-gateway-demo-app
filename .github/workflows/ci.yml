@@ -9,7 +9,7 @@ jobs:
     name: Resolve kit from GitHub + build (generic iOS Simulator)
     runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Xcode version
         run: xcodebuild -version
       - name: Resolve the remote package (pinned to the kit's release tag)

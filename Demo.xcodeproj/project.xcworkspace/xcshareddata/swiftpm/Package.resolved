@@ -1,0 +1,15 @@
+{
+  "originHash" : "94818b19ce4907bb16664882ebcd1d7982b130b3bdb442e0aaa68d244558875f",
+  "pins" : [
+    {
+      "identity" : "resumable-stream-gateway-kit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rajatslakhina/resumable-stream-gateway-kit.git",
+      "state" : {
+        "revision" : "7911097348f493caf0979e0a28906029735252f4",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
